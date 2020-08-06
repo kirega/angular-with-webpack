@@ -4,17 +4,45 @@
 
   To learn more about this file see: https://angular.io/config/solution-tsconfig.
 */
+// {
+//   "files": [],
+//   "references": [
+//     {
+//       "path": "./tsconfig.app.json"
+//     },
+//     {
+//       "path": "./tsconfig.spec.json"
+//     },
+//     {
+//       "path": "./e2e/tsconfig.json"
+//     }
+// ]
+// }
+
 {
-  "files": [],
-  "references": [
-    {
-      "path": "./tsconfig.app.json"
-    },
-    {
-      "path": "./tsconfig.spec.json"
-    },
-    {
-      "path": "./e2e/tsconfig.json"
-    }
-]
+  "compilerOptions": {
+    "target": "es5",
+    "module": "commonjs",
+    "skipLibCheck": true,
+    "moduleResolution": "node",
+    "types": ["node"],
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "sourceMap": false,
+    "lib": [
+      "es7",
+      "dom",
+      "es2017.object",
+      "es2015.iterable",
+      "ScriptHost"
+    ]
+  },
+  "files": [
+    "src/main.ts",
+    "src/vendor.ts",
+    "src/polyfills.ts"
+  ],
+  "include": [
+    "src/**/*.d.ts"
+  ]
 }
