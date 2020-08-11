@@ -19,7 +19,7 @@ module.exports = merge(commonConfig, {
   },
   externals: [
     Externals({
-      namespace: 'ext-app',
+      namespace: 'container-app',
       modules: [/@angular/]
     })
   ],
